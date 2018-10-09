@@ -25,8 +25,8 @@ const (
 	TICK_TIME   = 10       // 10 ms
 )
 
+var logger *golog.Logger = golog.New("ParticleTimer")
 var (
-	logger     *golog.Logger                        = golog.New("ParticleTimer")
 	_eventlist [TIMER_LEVEL]map[int64]*_timer_event // 分级事件列表
 
 	_eventqueue      map[int64]*_timer_event // 新增事件添加队列
